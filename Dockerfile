@@ -23,6 +23,10 @@ LABEL maintainer="delivery-engineering@netflix.com"
 
 RUN apk --no-cache add --update openjdk8-jre
 
+RUN yum install -y ps 
+
+RUN yum install top -y
+
 # Set where to look for config from
 ENV KAYENTA_OPTS=-Dspring.config.location=file:/opt/kayenta/config/kayenta.yml
 
